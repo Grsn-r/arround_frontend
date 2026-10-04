@@ -68,7 +68,7 @@ class Api{
 };
 
 const api = new Api({
-  baseUrl: 'https://api.chilldev.chickenkiller.com',
+  baseUrl: 'https://arround-backend.onrender.com',
   headers: {
     'Content-Type': 'application/json'
   }
