@@ -2,24 +2,21 @@ export const BASE_URL = "https://arround-backend.onrender.com";
 
 export const register = (email, password) => {
     return fetch(`${BASE_URL}/signup`, {
-        method: 'POST',
+        method: "POST",
         headers: {
-            "Content-Type" : "application/json",
+            "Content-Type": "application/json",
         },
-        body: JSON.stringify({email, password})
+        body: JSON.stringify({ email, password }),
     })
-    .then((res) => {
-        if (res.ok) {
-            return res.json();
+    .then(async (res) => {
+        const data = await res.json();
+
+        if (!res.ok) {
+            throw new Error(data.message || "Error al registrarse");
         }
-        return Promise.reject(res);
-    })
-    .catch(err => {
-        return err.json().then(error => {
-            alert(error.message)
-            throw error;
-        })
-    })
+
+        return data;
+    });
 };
 
 export const login = (email, password) => {
@@ -28,24 +25,17 @@ export const login = (email, password) => {
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({email, password}),
+        body: JSON.stringify({ email, password }),
     })
-    .then((res) => {
-        if (res.ok) {
-            return res.json();
-        } 
-        return Promise.reject(res);
-    })
-    .then((data) => {
-        if (data) {
-            localStorage.setItem('jwt', data.token);
-            return data;
+    .then(async (res) => {
+        const data = await res.json();
+
+        if (!res.ok) {
+            throw new Error(data.message || "Error al iniciar sesión");
         }
-    })
-    .catch((err) => {
-        return err.json().then(error => {
-            alert(error.message);
-            throw error;
-        })
-    })
-}
+
+        localStorage.setItem("jwt", data.token);
+
+        return data;
+    });
+};

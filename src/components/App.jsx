@@ -71,9 +71,9 @@ const handleLogIn = ({email, password}) => {
         setCurrentUser(userData);
         setEmail(userData.email);
         setCards(cardsData);
+        navigate('/');
       });
       }
-      navigate('/');
     })
     .catch(error => console.error(error));
   }

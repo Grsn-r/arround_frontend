@@ -24,5 +24,4 @@ VIDEO DE MUESTRA DE FUNCIONALIDAD:
 https://www.loom.com/share/9774f7b9d4f84c3998b2bbcff0b35780
 
 
-la estructura de directorios se ha seguido al pie de la letra
->>>>>>> 84818a42b78a2adc27dd0c8141b5d4979c6c3b2d
+
