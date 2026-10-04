@@ -1,0 +1,18 @@
+.page{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter';
+    padding: 0 200px;
+    background-color: rgba(0, 0, 0, 1);
+}
+@media screen and (max-width: 768px){
+    .page{
+        margin:0 135px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .page{
+        margin: 0 5px 0;
+    }
+}

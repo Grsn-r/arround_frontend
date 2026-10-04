@@ -1,0 +1,47 @@
+.register {
+    background-color: rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    width: 358px;
+    max-height: 100vh;
+    align-self: center;
+}
+
+.register__title {
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    align-self: center;
+}
+
+.register__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register__input {
+    margin-top: 30px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(204, 204, 204, 1);
+    color: white;
+}
+
+.register__button {
+    margin-top: 200px;
+    height: 50px;
+    border-radius: 2px;
+}
+
+.register__link {
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    align-self: center;
+}
+
+.register__top {
+    position: absolute;
+    top: 45px;
+    right: 200px;
+}

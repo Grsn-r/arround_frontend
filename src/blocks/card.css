@@ -1,0 +1,60 @@
+.card{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 1);
+}
+.card__list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10px 0;
+    gap: 20px;
+}
+.card__img{
+    object-fit: cover;
+    height: 300px;
+    cursor: pointer;
+}
+.card__erase-button{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-image: url(../images/trash-btn.png);
+    background-size: cover;
+    background-color: transparent;
+    height: 25px;
+    width: 22px;
+    border: none;
+}
+.card__erase-button:hover{
+    opacity: 60%;
+    cursor: pointer;
+}
+.card__ftr{
+    margin: 0 20px;
+    font-family: 'Inter Black';
+    font-weight: 900;
+    font-size: 24px;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card__like-button{
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    background-image: url(../images/like-button.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+}
+.card__like-button:hover{
+    opacity: 50%;
+    cursor: url(../images/puntero-custom.png), pointer;
+}
+.card__like-button_is-active{
+    background-image: url(../images/black-heart.svg);
+}

@@ -1,0 +1,48 @@
+.elements{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10px 0;
+    gap: 20px;
+}
+.elements__popup_form{
+    width: 30%;
+    position: fixed;
+    z-index: 2;
+    top:150px;
+    left: 35%;
+    background-color: rgba(255, 255, 255, 1);
+    display: none;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 5px;
+}
+.elements__popup_confirm{
+    text-align: center;
+    height: 50px;
+    margin-top: 50px;
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 1);
+}
+
+@media screen and (max-width: 768px){
+    .elements{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 320px) {
+    .elements{
+        grid-template-columns: 1fr;
+        margin: auto;
+    }
+    .card{
+    width: 15rem;
+    height: 21rem;
+    }
+    .card__img{
+        max-height: 240px;
+    }
+}
